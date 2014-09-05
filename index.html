@@ -21,13 +21,16 @@
 	</div>
 	<form>
 		<div class="inputNumber">
-			<label for="enterNumber">Guess the Number!</label>
+			<label for="enteredNumber" style="color: white; font-family: 'Droid Serif', serif;">Guess the Number!</label>
 			<input type="number" title="Enter number here" class="enteredNumber">
-			<div class="wrongentry">Make sure your guess is a number between 0 and 100.</div>
-			<button type="submit">Submit</button> <button class="restart">New Game</button>
+			<div class="error off" style="color: white; 'Droid Serif', serif;">Make sure your guess is a number between 0 and 100.</div>
+			<button type="submit">Submit</button> <button id="restart" class="off">New Game</button>
 		</div>
 	</form>
-
+	<div class="response off">
+        <h2 class="enteredNumber-vs-number"></h2>
+        <h3 class="enteredNumber-vs-guess"></h3>
+    </div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="jquery/myscript.js" type="text/javascript" charset="utf-8"></script>
