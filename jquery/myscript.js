@@ -33,47 +33,63 @@ var compareEntry = function(event) {
           	$('#enteredNumber-vs-guess').hide();
 
  //        // Feedback for a low guess
- 	    } 	else if (randomNumber > (guess + 25) ){
+ 	    } 	else if (randomNumber > (guess + 35) ){
             $('#enteredNumber-vs-number').text('Cold');
 	       // Feedback for a high guess
          	} 
          	else if (randomNumber > (guess + 15)){
              $('#enteredNumber-vs-number').text('Warm');
         	}
-        	else if (randomNumber > (guess + 5)){
+        	else if (randomNumber > (guess + 10)){
              $('#enteredNumber-vs-number').text('Warmer');
         	}
+        	else if (randomNumber > (guess + 5)){
+             $('#enteredNumber-vs-number').text('Hot');
+        	}
+        	else if (randomNumber < (guess - 35)){
+             $('#enteredNumber-vs-number').text('Cold');
+        	}
+        	else if (randomNumber < (guess - 15)){
+             $('#enteredNumber-vs-number').text('Warm');
+        	}
+        	else if (randomNumber < (guess - 10)){
+             $('#enteredNumber-vs-number').text('Warmer');
+        	}
+        	else if (randomNumber < (guess - 5)){
+             $('#enteredNumber-vs-number').text('Hot');
+        	}
+        	else
 
  	    // Blank out the guess input field and return focus to it
          $('#enteredNumber').val('').focus();
 
 
-     	if (previousEntry) {
+     	//if (previousEntry) {
           // Find distances of the current and previous guesses from the actual number
-        	var previousDistance = Math.abs(randomNumber - previousEntry);
-        	var currentDistance = Math.abs(randomNumber - guess);
+        	//var previousDistance = Math.abs(randomNumber - previousEntry);
+        	//var currentDistance = Math.abs(randomNumber - guess);
 
          // Feedback for guess versus previous guess comparison
-           if (guess === previousEntry) {
-	                $('.enteredNumber-vs-guess').text("Same guess!");
-	            } else if (currentDistance < previousDistance){
-	                $('.enteredNumber-vs-guess').text("Getting Hotter...");
-	            } else if (currentDistance > previousDistance) {
-	                $('.enteredNumber-vs-guess').text("Getting colder...");
-	            } else {
-	                $('.enteredNumber-vs-guess').text("Same distance...");
-	             }
+           //if (guess === previousEntry) {
+	                //$('.enteredNumber-vs-guess').text("Same guess!");
+	            //} else if (currentDistance < previousDistance){
+	                //$('.enteredNumber-vs-guess').text("Getting Hotter...");
+	            //} else if (currentDistance > previousDistance) {
+	                //$('.enteredNumber-vs-guess').text("Getting colder...");
+	            //} else {
+	                //$('.enteredNumber-vs-guess').text("Same distance...");
+	             //}
 
 	 		}    // Set new previous guess
-	 		        previousEntry = guess;
+	 		        //previousEntry = guess;
 
 	 		        // Display the response
-	 		        $('#response').show();
-	 		    }
-			     else {
+	 		        //$('#response').show();
+	 		    //}
+			     //else {
 	 		        //Blank out the guess field and return focus.
-		        $('#enteredNumber').val('').focus();
-	 		    }
+		        //$('#enteredNumber').val('').focus();
+	 		    //}
 }
 
 // // Bind a click of the reset button to browser reload
@@ -85,5 +101,4 @@ $('#entryForm').on('click', '#restart', function() {
 // // Bind form submission to the compareEntry function
 $('#entryForm').on('click', '#submitbutton', function(){
 	compareEntry();
-}
-)//compareEntry(event));
+});//compareEntry(event));
