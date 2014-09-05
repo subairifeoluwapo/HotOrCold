@@ -41,4 +41,42 @@ function compareEntry(event) {
     // Blank out the guess input field and return focus to it
         $('.enteredNumber').val('').focus();
 
+        if (previousEntry) {
+            // Find distances of the current and previous guesses from the actual number
+            var previousDistance = Math.abs(randomNumber - previousEntry);
+            var currentDistance = Math.abs(randomNumber - guess);
+
+            // Feedback for guess versus previous guess comparison
+            if (guess === previousEntry) {
+	                $('.enteredNumber-vs-guess').text("Same guess!");
+	            } else if (currentDistance < previousDistance){
+	                $('.enteredNumber-vs-guess').text("Getting warmer...");
+	            } else if (currentDistance > previousDistance) {
+	                $('.enteredNumber-vs-guess').text("Getting colder...");
+	            } else {
+	                $('.enteredNumber-vs-guess').text("Same distance...");
+	            }
+        	}
+
+			        // Set new previous guess
+			        previousEntry = guess;
+
+			        // Display the response
+			        $('.response').removeClass('off');
+			    } else {
+			        // Give error for invalid guess. Blank out the guess field and return focus.
+			        $('.error').removeClass('off').addClass('on');
+			        $('.enteredNumber').val('').focus();
+			    }
+		}
 }
+
+// Bind a click of the reset button to browser reload
+$('.form').on('click', '#restart', function(event) {
+    event.preventDefault();
+    location.reload();
+});
+
+// Bind form submission to the compareGuess function
+$('.form').submit(compareEntry);
+});
