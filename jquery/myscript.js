@@ -1,17 +1,15 @@
 
-$('.beanstalkimage').fadeIn("slow")
+$('.beanstalkimage').fadeIn("slow");
 
 $('.gameName').hide().show("slow");
 
-$('.enterNumber')
 
-$('.canYouGuess')
-
-$('enterNumber').click(function() {
-	prompt("Are you ready to play?")
-})
+var randomNumber = Math.floor(Math.random() % 1);
 
 
-$('.inputNumber')
+$( "input[type='number']" ).on( "blur", function() {
+if(!this.value ) {
+alert( "Please enter a number between 0 and 100!" );
+}
+});
 
-$(".enterNumber").Math.random()

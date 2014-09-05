@@ -7,17 +7,16 @@ html {
 }
 
 .beanstalkimage {
-	opacity: .9;
-	max-height: .5em;
-	max-width: .5em;
-	padding-right: .5em;
+	opacity: .5;
+	height: .2em;
+	width: .2em;
 }
 
 .gameName {
 	border: none;
 	padding: .5em 1em;
 	padding-bottom: 0;
-	margin: .5em 1em;
+	margin: .5em .5em;
 	text-align: center;
 	font-family: 'Lobster', cursive;
 	font-weight: bolder;
@@ -36,7 +35,7 @@ html {
 	max-width: 30em;
 	background-image: url("../img/wood.jpg");
 	background-size: 65%;
-	padding: 3em 2em;
+	padding: 2em 2em;
 	border: none;
 	border-radius: 10%;
 	border-style: none;
@@ -47,7 +46,7 @@ html {
 }
 
 .enterNumber {
-
+	height: 3em;
 }
 
 button {
