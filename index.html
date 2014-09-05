@@ -5,7 +5,7 @@
 	<title>HotOrCold</title>
 	<link  rel="resetsheet" href="css/reset.css" type="test/css" media="screen" title="notitle" charset="utf-8">
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" title="notitle" charset="utf-8">
-	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster|Droid+Serif' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -15,11 +15,14 @@
 	<div class="gameName">
 		<h1>Huckle Buckle Beanstalk</h1>
 	</div>
-	<div>
-		<p></p>
+	<div class="canYouGuess">
+		<p>Can you guess the number?</p>
+		<p>Enter a number between 0 and 100</p>
 	</div>
-	<div>
-		<input type="number" class="enterNumber"><label>Guess the Number!</label>
+	<div class="inputNumber">
+		<label for="enterNumber">Guess the Number!</label>
+		<input type="number" title="Enter number here" class="enterNumber">
+		<button type="submit">Submit</button> <button type="">New Game</button>
 	</div>
 
 
