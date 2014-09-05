@@ -1,0 +1,23 @@
+/*COMMENT HERE*/
+
+html {
+	background-image: url("../img/brick.jpg");
+	background-color: #8B4513;
+	background-size: cover;
+}
+
+.beanstalkimage {
+	opacity: .5;
+	max-height: .5em;
+	max-width: .5em;
+}
+
+.gameName {
+	border: none;
+	padding: .5em .5em;
+	margin: .5em .5em;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-weight: bolder;
+	font-size: 3em;
+}
