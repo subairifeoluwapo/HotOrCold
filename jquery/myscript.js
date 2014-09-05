@@ -1,40 +1,47 @@
-var randomNumber = Math.floor(Math.random() * 100);
-
 $('.beanstalkimage').fadeIn("slow");
 
 $('.gameName').hide().show("slow");
 
 
-// // Global variable//
-var previousEntry;
 
+// // Global variable//
+var randomNumber = Math.floor(Math.random() * 100);
+
+var previousEntry;
+var guess;
 
 // // Checks to see if the guess is within the parameters given
+
 var validEntry = function(guess) {
-    return isNaN(guess) && guess <= 100 && guess >= 0;
+	return (guess <= 100 && guess >= 0);
 }
 
 var compareEntry = function(event) {
-	event.preventDefault();
+	//event.preventDefault();
+	
 	// // Grab the guess from the text input field
+	
     guess = $('#enteredNumber').val();
 
-	if (validEntry) {
+	if (validEntry(guess)) {
 
         // Convert guess value to an integer for comparison
     	guess = parseInt(guess, 10);
- //        // Feedback for a correct guess. Show the reset button to start a new game.
+
         if (guess === randomNumber) {
             $('#enteredNumber-vs-number').text('You got it! The number was ' + randomNumber + '.');
           	$('#enteredNumber-vs-guess').hide();
 
  //        // Feedback for a low guess
- 	    } else if (randomNumber > guess) {
-            $('#enteredNumber-vs-number').text('Higher than ' + guess);
+ 	    } 	else if (randomNumber > (guess + 25) ){
+            $('#enteredNumber-vs-number').text('Cold');
 	       // Feedback for a high guess
          	} 
-         else {
-             $('#enteredNumber-vs-number').text('Lower than ' + guess);
+         	else if (randomNumber > (guess + 15)){
+             $('#enteredNumber-vs-number').text('Warm');
+        	}
+        	else if (randomNumber > (guess + 5)){
+             $('#enteredNumber-vs-number').text('Warmer');
         	}
 
  	    // Blank out the guess input field and return focus to it
@@ -48,33 +55,35 @@ var compareEntry = function(event) {
 
          // Feedback for guess versus previous guess comparison
            if (guess === previousEntry) {
-	                $('#enteredNumber-vs-guess').text("Same guess!");
+	                $('.enteredNumber-vs-guess').text("Same guess!");
 	            } else if (currentDistance < previousDistance){
-	                $('#enteredNumber-vs-guess').text("Getting Hotter...");
+	                $('.enteredNumber-vs-guess').text("Getting Hotter...");
 	            } else if (currentDistance > previousDistance) {
-	                $('#enteredNumber-vs-guess').text("Getting colder...");
+	                $('.enteredNumber-vs-guess').text("Getting colder...");
 	            } else {
-	                $('#enteredNumber-vs-guess').text("Same distance...");
+	                $('.enteredNumber-vs-guess').text("Same distance...");
 	             }
 
 	 		}    // Set new previous guess
 	 		        previousEntry = guess;
 
 	 		        // Display the response
-	 		        $('.response').show();
+	 		        $('#response').show();
 	 		    }
 			     else {
-	 		        // Give error for invalid guess. Blank out the guess field and return focus.
-	 		        $('.error').show();
-		        $('.enteredNumber').val('').focus();
+	 		        //Blank out the guess field and return focus.
+		        $('#enteredNumber').val('').focus();
 	 		    }
 }
 
 // // Bind a click of the reset button to browser reload
-$('#restart').on('click', '#restart', function() {
+$('#entryForm').on('click', '#restart', function() {
 	event.preventDefault();
 	location.reload();
 	 });
 
 // // Bind form submission to the compareEntry function
-$('#submitbutton').submit(compareEntry());
+$('#entryForm').on('click', '#submitbutton', function(){
+	compareEntry();
+}
+)//compareEntry(event));

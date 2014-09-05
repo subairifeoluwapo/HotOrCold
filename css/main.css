@@ -45,8 +45,22 @@ html {
 	box-shadow: .3em .3em brown;
 }
 
-.enteredNumber {
+#enteredNumber {
 	height: 3em;
+}
+
+#enteredNumber-vs-number {
+	margin-left: 5em;
+	font-family: 'Droid Serif', serif;
+	font-size: 2.5em;
+	color: brown;
+}
+
+#enteredNumber-vs-guess {
+	margin-left: 5em;
+	font-family: 'Droid Serif', serif;
+	font-size: 2.5em;
+	color: brown;
 }
 
 button {
