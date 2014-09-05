@@ -19,15 +19,15 @@
 		<p>Can you guess the number?</p>
 		<p>Enter a number between 0 and 100</p>
 	</div>
-	<form class="form">
+	<form class="entryForm">
 		<div class="inputNumber">
 			<label for="enteredNumber" style="color: white; font-family: 'Droid Serif', serif;">Guess the Number!</label>
-			<input type="number" title="Enter number here" class="enteredNumber">
-			<div class="error off" style="color: white; 'Droid Serif', serif;">Make sure your guess is a number between 0 and 100.</div>
-			<button type="submit">Submit</button> <button id="restart" class="off">New Game</button>
+			<input type="number" title="Enter number here" id="enteredNumber">
+			<div class="error" style="color: white; 'Droid Serif', serif;">Make sure your guess is a number between 0 and 100.</div>
+			<button type="button" id="submitbutton">Submit</button> <button id="restart" class="off">New Game</button>
 		</div>
 	</form>
-	<div class="response off">
+	<div class="response">
         <h2 class="enteredNumber-vs-number"></h2>
         <h3 class="enteredNumber-vs-guess"></h3>
     </div>
