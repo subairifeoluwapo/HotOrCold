@@ -19,11 +19,14 @@
 		<p>Can you guess the number?</p>
 		<p>Enter a number between 0 and 100</p>
 	</div>
-	<div class="inputNumber">
-		<label for="enterNumber">Guess the Number!</label>
-		<input type="number" title="Enter number here" class="enterNumber">
-		<button type="submit">Submit</button> <button type="">New Game</button>
-	</div>
+	<form>
+		<div class="inputNumber">
+			<label for="enterNumber">Guess the Number!</label>
+			<input type="number" title="Enter number here" class="enteredNumber">
+			<div class="wrongentry">Make sure your guess is a number between 0 and 100.</div>
+			<button type="submit">Submit</button> <button class="restart">New Game</button>
+		</div>
+	</form>
 
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
