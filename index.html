@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HotOrCold</title>
+	<link  rel="resetsheet" href="css/reset.css" type="test/css" media="screen" title="notitle" charset="utf-8">
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" title="notitle" charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Lobster|Droid+Serif' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="beanstalkimage">
+		<img src="img/beanstalk.jpg" alt="" width="100" height="123"
+style="position: relative; left: 10px;">
+	</div>
+	<div class="gameName">
+		<h1>Huckle Buckle Beanstalk</h1>
+	</div>
+	<div class="canYouGuess">
+		<p>Can you guess the number?</p>
+		<p>Enter a number between 0 and 100</p>
+	</div>
+	<div id="response">
+        <h2 id="enteredNumber-vs-number"></h2>
+        <h3 id="enteredNumber-vs-guess"></h3>
+    </div>
+	<form id="entryForm">
+		<div class="inputNumber">
+			<label for="enteredNumber" style="color: white; font-family: 'Droid Serif', serif;">Guess the Number!</label>
+			<input type="number" title="Enter number here" id="enteredNumber">
+			<button type="button" id="submitbutton">Submit</button> <button id="restart" class="off">New Game</button>
+		</div>
+	</form>
+	
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery/myscript.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
