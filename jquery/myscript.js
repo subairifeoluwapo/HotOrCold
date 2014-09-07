@@ -46,6 +46,9 @@ var compareEntry = function(event) {
         	else if (randomNumber > (guess + 5)){
              $('#enteredNumber-vs-number').text('Hot');
         	}
+            else if (randomNumber > (guess + 2)){
+             $('#enteredNumber-vs-number').text('Hotter');
+            }
         	else if (randomNumber < (guess - 35)){
              $('#enteredNumber-vs-number').text('Cold');
         	}
@@ -58,7 +61,9 @@ var compareEntry = function(event) {
         	else if (randomNumber < (guess - 5)){
              $('#enteredNumber-vs-number').text('Hot');
         	}
-        	else
+            else if (randomNumber < (guess - 2)){
+             $('#enteredNumber-vs-number').text('Hot');
+            }
 
  	    // Blank out the guess input field and return focus to it
          $('#enteredNumber').val('').focus();
