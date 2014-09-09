@@ -14,7 +14,7 @@ var HotOrColdGame = {
 
 	validEntry: function() {
 		var guess = $('#enteredNumber').val();
-	    if (guess === '' || guess === ' ' || guess === 'string') {
+	    if (guess === '' || guess === ' ' || isNaN(guess)) {
 	        $('#invalidEntry').append('Invalid Entry! Enter a number between 0 and 100.');
 	    } else {return guess}
 	},
@@ -65,7 +65,7 @@ var HotOrColdGame = {
 
 	initialize: function() {
 	$('#submitbutton').click(HotOrColdGame.compareEntry);
-	$('#entryForm').on('click', '#restart', HotOrColdGame.restart);
+	$('#restart').on('click', '#restart', HotOrColdGame.restart);
 	},
 
 }
