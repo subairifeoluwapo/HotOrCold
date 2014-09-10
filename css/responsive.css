@@ -12,27 +12,29 @@
 
 	.gameName {
 		padding-top: 2.3em;
-		font-size: .75em;
+		font-size: .9em;
 	}
 
 	.canYouGuess {
-		font-size: .7em;
+		font-size: .8em;
 		margin-bottom: 5em;
 	}
 
 	form {
 		margin: 0 1.5em;
-		margin-bottom: 10em;
+		margin-bottom: 15em;
 	}
 
 	.inputNumber {
-		width: 10em;
+		width: 12em;
+		height: 12em;
 		margin: 2em 10%;
 
 	}
 
 	#enteredNumber {
 		height: 2em;
+		margin-bottom: 2em;
 	}
 
 	#enteredNumber-vs-number{
