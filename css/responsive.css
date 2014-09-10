@@ -2,6 +2,7 @@
 	html {
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 	}
 
 	.beanstalkimage {
@@ -21,6 +22,7 @@
 
 	form {
 		margin: 0 1.5em;
+		margin-bottom: 10em;
 	}
 
 	.inputNumber {
@@ -42,7 +44,7 @@
 	}
 
 	button {
-		margin: .5em .5em;
+		margin: 1em 1em;
 		padding: .3em .3em;
 	}
 
