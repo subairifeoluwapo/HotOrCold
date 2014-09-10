@@ -1,7 +1,6 @@
 @media screen and (max-width: 480px) {
 	html {
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-position: center;
 	}
 
@@ -17,6 +16,11 @@
 
 	.canYouGuess {
 		font-size: .7em;
+		margin-bottom: 5em;
+	}
+
+	form {
+		margin: 0 1.5em;
 	}
 
 	.inputNumber {
@@ -38,7 +42,7 @@
 	}
 
 	button {
-		margin: .3em .5em;
+		margin: .5em .5em;
 		padding: .3em .3em;
 	}
 
