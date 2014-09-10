@@ -1,0 +1,46 @@
+@media screen and (max-width: 480px) {
+	html {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+
+	.beanstalkimage {
+		display: block;
+		padding-bottom: 5em;
+	}
+
+	.gameName {
+		padding-top: 2.3em;
+		font-size: .75em;
+	}
+
+	.canYouGuess {
+		font-size: .7em;
+	}
+
+	.inputNumber {
+		width: 10em;
+		margin: 2em 10%;
+
+	}
+
+	#enteredNumber {
+		height: 2em;
+	}
+
+	#enteredNumber-vs-number{
+		font-size: 1em;
+	}
+
+	#enteredNumber-vs-guess {
+		font-size: 1em;
+	}
+
+	button {
+		margin: .3em .5em;
+		padding: .3em .3em;
+	}
+
+
+}
