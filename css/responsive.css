@@ -1,8 +1,8 @@
 @media screen and (max-width: 480px) {
 	html {
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.beanstalkimage {
@@ -49,6 +49,38 @@
 		margin: 1em 1em;
 		padding: .3em .3em;
 	}
+
+
+}
+
+
+
+
+@media screen and (max-width: 980px) {
+
+	html {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+
+
+	form {
+		margin: 0 1.4em;
+		margin-bottom: 10em;
+	}
+
+
+	.inputNumber {
+		width: 20em;
+		height: 15em;
+		margin: 2em 20%;
+
+	}
+
+
+
 
 
 }
