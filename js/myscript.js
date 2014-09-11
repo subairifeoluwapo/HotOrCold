@@ -45,7 +45,7 @@ var HotOrColdGame = {
 	                $('#enteredNumber-vs-number').text('You are as cold as Neptune!');
 	            }
 	            else {
-	                $('#enteredNumber-vs-number').text('You are so you could freeze the ocean!');
+	                $('#enteredNumber-vs-number').text('You are so cold you could freeze the ocean!');
 	            }
 	 	    // Blank out the guess input field and return focus to it
 	         $('#enteredNumber').val('').focus();

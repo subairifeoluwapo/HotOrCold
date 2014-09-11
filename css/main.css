@@ -47,6 +47,10 @@ html {
 
 #enteredNumber {
 	height: 3em;
+	text-align: center;
+	font-size: 1.1em;
+	font-family: 'Lobster', cursive;
+	font-weight: bolder;
 }
 
 #enteredNumber-vs-number {
