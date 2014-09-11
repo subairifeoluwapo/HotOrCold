@@ -1,60 +1,3 @@
-@media screen and (max-width: 480px) {
-	html {
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
-	.beanstalkimage {
-		display: block;
-		padding-bottom: 5em;
-	}
-
-	.gameName {
-		padding-top: 2.3em;
-		font-size: .9em;
-	}
-
-	.canYouGuess {
-		font-size: .8em;
-		margin-bottom: 5em;
-	}
-
-	form {
-		margin: 0 1.4em;
-		margin-bottom: 5em;
-	}
-
-	.inputNumber {
-		width: 12em;
-		height: 9em;
-		margin: 2em 10%;
-
-	}
-
-	#enteredNumber {
-		height: 2em;
-		margin-bottom: 2em;
-	}
-
-	#enteredNumber-vs-number{
-		font-size: 1em;
-	}
-
-	#enteredNumber-vs-guess {
-		font-size: 1em;
-	}
-
-	button {
-		margin: 1em 1em;
-		padding: .3em .3em;
-	}
-
-
-}
-
-
-
 
 @media screen and (max-width: 980px) {
 
@@ -80,7 +23,64 @@
 	}
 
 
+}
 
+
+@media screen and (max-width: 480px) {
+	html {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.beanstalkimage {
+		display: block;
+		padding-bottom: 5em;
+	}
+
+	.gameName {
+		padding-top: 2.3em;
+		font-size: .9em;
+	}
+
+	.canYouGuess {
+		font-size: .8em;
+		margin-bottom: 5em;
+	}
+
+	form {
+		margin: 0 .4em;
+		margin-bottom: 5em;
+	}
+
+	.inputNumber {
+		width: 10em;
+		height: 6em;
+		margin: 2em 10%;
+
+	}
+
+	#enteredNumber {
+		height: 2em;
+		margin-bottom: 2em;
+	}
+
+	#enteredNumber-vs-number{
+		font-size: 1em;
+	}
+
+	#enteredNumber-vs-guess {
+		font-size: 1em;
+	}
+
+	button {
+		margin: .5em .1em;
+		padding: .2em .2em;
+	}
 
 
 }
+
+
+
+
