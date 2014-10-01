@@ -12,6 +12,14 @@ var HotOrColdGame = {
 		$('.gameName').hide().show("slow");
 	},
 
+	aboutTheGame: function() {
+		$('#aboutGame').show();
+	},
+
+	backtoGame: function() {
+		$('#aboutGame').hide();
+	},
+
 	validEntry: function() {
 		var guess = $('#enteredNumber').val();
 	    if (guess === '' || guess === ' ' || isNaN(guess)) {
@@ -44,16 +52,16 @@ var HotOrColdGame = {
 	            else if (Math.abs(guess - randomNumber)  >= 30 && Math.abs(guess - randomNumber) <= 40) {
 	                $('#enteredNumber-vs-number').text('You are as cold as Neptune!');
 	            }
-	            else {
+	        else {
 	                $('#enteredNumber-vs-number').text('You are so cold you could freeze the ocean!');
-	            }
+	        }
 	 	    // Blank out the guess input field and return focus to it
-	         $('#enteredNumber').val('').focus();
+	        $('#enteredNumber').val('').focus();
 		}    
-				    else {
-		 		        //Blank out the guess field and return focus.
-			       		$('#enteredNumber').val('').focus();
-		 		    }
+		else {
+		    //Blank out the guess field and return focus.
+       		$('#enteredNumber').val('').focus();
+		}
 	},
 
 
@@ -64,12 +72,15 @@ var HotOrColdGame = {
 	},
 
 	initialize: function() {
-	$('#submitbutton').click(HotOrColdGame.compareEntry);
-	$('#restart').on('click', '#restart', HotOrColdGame.restart);
-	HotOrColdGame.randomNumber();
-	HotOrColdGame.animate();
+		$('#aboutGame').hide();
+		$('#howToPlay').click(HotOrColdGame.aboutTheGame);
+		$('#done').click(HotOrColdGame.backtoGame)
+		$('#submitbutton').click(HotOrColdGame.compareEntry);
+		$('#restart').on('click', '#restart', HotOrColdGame.restart);
+		HotOrColdGame.randomNumber();
+		HotOrColdGame.animate();
 	},
 
-}
+};
 
 $(document).ready(HotOrColdGame.initialize);
