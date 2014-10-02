@@ -14,10 +14,12 @@ var HotOrColdGame = {
 
 	aboutTheGame: function() {
 		$('#aboutGame').show();
+		$('#entryForm').hide();
 	},
 
 	backtoGame: function() {
 		$('#aboutGame').hide();
+		$('#entryForm').show();
 	},
 
 	validEntry: function() {
